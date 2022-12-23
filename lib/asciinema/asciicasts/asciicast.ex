@@ -49,7 +49,7 @@ defmodule Asciinema.Asciicasts.Asciicast do
   end
 
   defimpl Phoenix.Param, for: Asciicast do
-    def to_param(%Asciicast{private: true, secret_token: secret_token}) do
+    def to_param(%Asciicast{private: false, secret_token: secret_token}) do
       secret_token
     end
 
