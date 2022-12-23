@@ -106,7 +106,7 @@ defmodule Asciinema.Asciicasts do
 
       {:ok, _} =
         create_asciicast(user, upload, %{
-          private: false,
+          private: true,
           snapshot_at: 76.2
         })
     end
