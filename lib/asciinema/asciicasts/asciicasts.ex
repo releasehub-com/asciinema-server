@@ -106,7 +106,7 @@ defmodule Asciinema.Asciicasts do
 
       {:ok, _} =
         create_asciicast(user, upload, %{
-          private: true,
+          private: false,
           snapshot_at: 76.2
         })
     end
@@ -120,7 +120,7 @@ defmodule Asciinema.Asciicasts do
     asciicast = %Asciicast{
       user_id: user.id,
       filename: filename,
-      private: user.asciicasts_private_by_default
+      private: false
     }
 
     with {:ok, attrs} <- extract_metadata(upload),
