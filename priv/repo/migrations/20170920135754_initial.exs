@@ -14,7 +14,7 @@ defmodule Asciinema.Repo.Migrations.Initial do
       add :auth_token, :string
       add :theme_name, :string
       add :temporary_username, :string
-      add :asciicasts_private_by_default, :boolean, default: true, null: false
+      add :asciicasts_private_by_default, :boolean, default: false, null: false
       add :last_login_at, :naive_datetime
     end
 
